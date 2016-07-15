@@ -4,6 +4,10 @@ $icon-font-path: '../fonts/';
 //@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+$white: #fff;
+$black: #000;
+$grey:  #333;
+
 body{
   background: #eee;
   padding-top: 60px;
@@ -12,14 +16,14 @@ body{
 header{
   width: 100%;
   height: 50px;
-  background: #333;
+  background: $grey;
   position: absolute;
   top:0;
   left:0;
 }
 
 header span{
-    color: #fff;
+  color: $white;
 }
 
 select{
@@ -27,7 +31,7 @@ select{
 }
 
 .box{
-  background: #fff;
+  background: $white;
   width: 46%;
   margin:2%;
   float: left;
@@ -40,8 +44,8 @@ table{
 }
 
 th{
-  background: #333;
-  color: #fff;
+  background: $grey;
+  color: $white;
   padding: 4px;
 }
 
@@ -56,8 +60,8 @@ tr:nth-child(odd){
 }
 
 table td {
-border-left: 1px solid #000;
-border-right: 1px solid #000;
+border-left: 1px solid $black;
+border-right: 1px solid $black;
 }
 
 table td:first-child {
@@ -73,16 +77,17 @@ table tbody tr td{
 }
 
 
+
 @media (max-width:1024px){
+  header span:nth-child(1){
+      display: none;
+  }
+
   .box1, #gender{
     display: none;
   }
 
   .box{
     width: 96%;
-  }
-
-  header span:nth-child(1){
-      display: none;
   }
 }
